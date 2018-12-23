@@ -1,4 +1,4 @@
-package com.fast.cloud.api.gateway;
+package com.fast.cloud.api.gateway.config.swagger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,5 @@
-package com.fast.cloud.api.gateway;
+package com.fast.cloud.api.gateway.config.swagger;
 
-import lombok.AllArgsConstructor;
 import org.springframework.cloud.gateway.config.GatewayProperties;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.support.NameUtils;

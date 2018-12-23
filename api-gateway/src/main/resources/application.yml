@@ -15,9 +15,6 @@ spring:
           filters:
             - SwaggerHeaderFilter
             - StripPrefix=1
-
-
-
 server:
   port: 9000
 eureka:
