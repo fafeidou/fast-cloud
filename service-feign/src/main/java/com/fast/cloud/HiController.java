@@ -1,9 +1,12 @@
 package com.fast.cloud;
 
 import com.fast.cloud.openapi.SchedualServiceHi;
+import com.fast.cloud.openapi.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +30,7 @@ public class HiController {
     }
 
     @GetMapping(value = "/page")
-    public PageImpl getPage() {
-        return schedualServiceHi.getPage();
+    public PageImpl getPage(@RequestBody User user) {
+        return schedualServiceHi.getPage(user);
     }
 }

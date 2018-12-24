@@ -12,6 +12,7 @@
         <module>service-feign</module>
         <module>service-hi</module>
         <module>open-api</module>
+        <module>api-gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

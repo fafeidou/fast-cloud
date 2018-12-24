@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,9 +23,10 @@ public interface SchedualServiceHi {
     @ApiOperation(value="sayHiFromClientOne", notes="sayHiFromClientOne")
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 
-    @RequestMapping(value = "/page",method = RequestMethod.GET)
+    @RequestMapping(value = "/page",method = RequestMethod.POST)
     @ApiOperation(value="getPage", notes="getPage")
-    PageImpl getPage();
+    PageImpl<String> getPage(@RequestBody User user);
+
     @Component
     class SchedualServiceHiHystric implements SchedualServiceHi {
         @Override
@@ -33,7 +35,7 @@ public interface SchedualServiceHi {
         }
 
         @Override
-        public PageImpl getPage() {
+        public PageImpl<String> getPage(User user) {
             return null;
         }
     }

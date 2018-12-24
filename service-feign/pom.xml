@@ -22,6 +22,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.M3</spring-cloud.version>
+        <fastJson.version>1.2.54</fastJson.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,12 @@
             <groupId>com.fast.cloud</groupId>
             <artifactId>open-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--fastJson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastJson.version}</version>
         </dependency>
     </dependencies>
 

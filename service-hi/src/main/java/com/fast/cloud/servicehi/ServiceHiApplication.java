@@ -1,6 +1,7 @@
 package com.fast.cloud.servicehi;
 
 import com.fast.cloud.openapi.SchedualServiceHi;
+import com.fast.cloud.openapi.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,7 +38,7 @@ public class ServiceHiApplication implements SchedualServiceHi {
     }
 
     @Override
-    public PageImpl getPage() {
+    public PageImpl<String> getPage(User user) {
         Pageable pageable = new Pageable() {
             @Override
             public int getPageNumber() {
