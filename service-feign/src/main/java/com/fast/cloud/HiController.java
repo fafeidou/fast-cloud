@@ -1,9 +1,11 @@
 package com.fast.cloud;
 
+import com.fast.cloud.model.Loggable;
 import com.fast.cloud.openapi.SchedualServiceHi;
 import com.fast.cloud.openapi.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2018-11-23 19:37
  */
 @RestController
-public class HiController {
+public class HiController extends Loggable {
 
 
     //编译器报错，无视。 因为这个Bean是在程序启动的时候注入的，编译器感知不到，所以报错。
@@ -25,7 +27,9 @@ public class HiController {
     SchedualServiceHi schedualServiceHi;
 
     @GetMapping(value = "/hi")
+
     public String sayHi(@RequestParam String name) {
+
         return schedualServiceHi.sayHiFromClientOne(name);
     }
 
