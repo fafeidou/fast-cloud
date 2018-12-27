@@ -1,4 +1,4 @@
-package com.fast.cloud;
+package com.fast.cloud.config;
 
 import feign.Feign;
 import okhttp3.ConnectionPool;

@@ -1,4 +1,4 @@
-package com.fast.cloud;
+package com.fast.cloud.controller;
 
 import com.fast.cloud.model.Loggable;
 import com.fast.cloud.openapi.SchedualServiceHi;
