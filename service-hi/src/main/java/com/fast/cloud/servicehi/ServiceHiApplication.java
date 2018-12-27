@@ -32,7 +32,6 @@ public class ServiceHiApplication extends Loggable implements SchedualServiceHi 
         SpringApplication.run(ServiceHiApplication.class, args);
     }
 
-
     @Value("${server.port}")
     String port;
 
@@ -41,7 +40,6 @@ public class ServiceHiApplication extends Loggable implements SchedualServiceHi 
     @HystrixCommand
     public String sayHiFromClientOne(String name) {
         $info("----------------" + name);
-//        throw new RuntimeException("aaaaa");
         return "hi " + name + " ,i am from port:" + port;
     }
 

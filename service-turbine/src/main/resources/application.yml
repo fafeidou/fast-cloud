@@ -1,0 +1,21 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: service-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+turbine:
+  appConfig: service-hi,service-feign
+  clusterNameExpression: new String("default")
+
+
