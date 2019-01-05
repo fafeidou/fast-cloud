@@ -19,6 +19,9 @@
         <module>service-turbine</module>
         <module>hystrix-dashboard</module>
         <module>sleuth-learn</module>
+        <module>zipkin-learn</module>
+        <module>stream-parent</module>
+        <module>fast-cloud-common</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
