@@ -6,17 +6,21 @@ spring:
     name: service-hi
 
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
 management:
-  security:
-    enabled: false
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 feign:
   hystrix:
     enabled: true

@@ -16,10 +16,19 @@ feign:
   hystrix:
     enabled: true
 
+#management:
+#  security:
+#    enabled: false
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream
+
 management:
-  security:
-    enabled: false
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
