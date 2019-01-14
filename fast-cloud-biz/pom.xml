@@ -3,41 +3,48 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.fast.cloud</groupId>
+        <artifactId>fast-cloud</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.fast.cloud</groupId>
+    <packaging>pom</packaging>
     <artifactId>fast-cloud-biz</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>fast-cloud-biz</name>
     <description>fast-cloud-biz</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <modules>
+        <module>fast-cloud-biz-ctrl</module>
+        <module>fast-cloud-biz-domain</module>
+        <module>fast-cloud-biz-service</module>
+        <module>fast-cloud-biz-starter</module>
+    </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-domain</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-starter</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-ctrl</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
