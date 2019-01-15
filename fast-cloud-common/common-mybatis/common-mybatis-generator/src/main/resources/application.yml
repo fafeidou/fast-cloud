@@ -1,6 +1,6 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.133.95:3306/ckshop?serverTimezone=GMT%2B8
+    url: jdbc:mapper://192.168.133.95:3306/ckshop?serverTimezone=GMT%2B8
     username: root
     password: ck@123456

@@ -22,6 +22,8 @@
         <module>zipkin-learn</module>
         <module>stream-parent</module>
         <module>fast-cloud-common</module>
+        <module>springboot-admin</module>
+        <module>fast-cloud-biz</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

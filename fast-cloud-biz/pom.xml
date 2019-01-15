@@ -17,6 +17,7 @@
         <module>fast-cloud-biz-domain</module>
         <module>fast-cloud-biz-service</module>
         <module>fast-cloud-biz-starter</module>
+        <module>fast-cloud-biz-dao</module>
     </modules>
 
     <dependencies>
@@ -42,6 +43,11 @@
             <dependency>
                 <groupId>com.fast.cloud</groupId>
                 <artifactId>fast-cloud-biz-ctrl</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-dao</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
