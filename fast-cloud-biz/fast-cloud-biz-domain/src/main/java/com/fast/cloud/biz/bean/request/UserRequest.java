@@ -1,5 +1,7 @@
 package com.fast.cloud.biz.bean.request;
 
+import com.fast.cloud.bean.MatchType;
+import com.fast.cloud.bean.QueryCondition;
 import lombok.Data;
 
 /**
@@ -10,4 +12,9 @@ import lombok.Data;
  */
 @Data
 public class UserRequest {
+    private String id;
+    @QueryCondition
+    private String userName;
+    @QueryCondition(func = MatchType.like)
+    private String password;
 }

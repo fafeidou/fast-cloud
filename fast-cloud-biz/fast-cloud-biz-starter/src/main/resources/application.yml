@@ -9,9 +9,11 @@ spring:
       host: 192.168.138.54
       port: 27017
       database: test
+  profiles:
+    active: dev
 mybatis:
   mapper-locations: #mapper/*Mapper.xml
-  type-aliases-package: #com.fast.cloud.biz.domain.*
+  type-aliases-package: #com.fast.cloud.biz.bean.*
   configuration:
     map-underscore-to-camel-case: true
 

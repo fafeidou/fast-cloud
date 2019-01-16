@@ -1,12 +1,12 @@
-package com.fast.cloud.biz.mongo.domain.request;
+package com.fast.cloud.mongo.bean.request;
 
+import com.fast.cloud.bean.AbstractRequest;
+import com.fast.cloud.bean.QueryCondition;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.util.CollectionUtils;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -118,29 +118,4 @@ public class MongoRequest<T> extends AbstractRequest<T> {
         return query;
     }
 
-
-    //获取类clazz的所有Field，包括其父类的Field
-    private List<Field> getAllFieldsWithRoot(Class<?> clazz) {
-        List<Field> fieldList = new ArrayList<>();
-        Field[] dFields = clazz.getDeclaredFields();//获取本类所有字段
-        if (null != dFields && dFields.length > 0) {
-            fieldList.addAll(Arrays.asList(dFields));
-        }
-
-        // 若父类是Object，则直接返回当前Field列表
-        Class<?> superClass = clazz.getSuperclass();
-        if (superClass == Object.class) {
-            return Arrays.asList(dFields);
-        }
-
-        // 递归查询父类的field列表
-        List<Field> superFields = getAllFieldsWithRoot(superClass);
-
-        if (null != superFields && !superFields.isEmpty()) {
-            superFields.stream().
-                    filter(field -> !fieldList.contains(field)).//不重复字段
-                    forEach(field -> fieldList.add(field));
-        }
-        return fieldList;
-    }
 }

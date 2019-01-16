@@ -4,8 +4,8 @@ import com.fast.cloud.biz.bean.request.CityRequest;
 import com.fast.cloud.biz.bean.response.CollectionWithPaginationAndAbstractResponse;
 import com.fast.cloud.biz.bean.vo.CityVo;
 import com.fast.cloud.biz.domain.CityModel;
-import com.fast.cloud.biz.mongo.domain.request.MongoRequest;
-import com.fast.cloud.biz.mongo.service.IService;
+import com.fast.cloud.mongo.bean.request.MongoRequest;
+import com.fast.cloud.mongo.service.IService;
 
 import java.util.List;
 

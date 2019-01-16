@@ -5,10 +5,7 @@ import com.fast.cloud.biz.openapi.SchedualServiceHi;
 import com.fast.cloud.biz.openapi.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
@@ -25,13 +22,11 @@ public class HiController extends Loggable {
     SchedualServiceHi schedualServiceHi;
 
     @GetMapping(value = "/hi")
-
     public String sayHi(@RequestParam String name) {
-
         return schedualServiceHi.sayHiFromClientOne(name);
     }
 
-    @GetMapping(value = "/page")
+    @RequestMapping(value = "/page")
     public PageImpl getPage(@RequestBody User user) {
         return schedualServiceHi.getPage(user);
     }

@@ -1,4 +1,4 @@
-package com.fast.cloud.biz.mybatis.config.service;
+package com.fast.cloud.mybatis.service;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;

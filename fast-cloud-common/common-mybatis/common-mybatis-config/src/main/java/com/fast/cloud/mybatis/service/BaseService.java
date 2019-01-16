@@ -1,4 +1,4 @@
-package com.fast.cloud.biz.mybatis.config.service;
+package com.fast.cloud.mybatis.service;
 
 import org.apache.ibatis.session.RowBounds;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ public abstract class BaseService<T> implements IService<T> {
     /**
      * The Mapper.
      */
-    @Autowired
+    @Autowired(required = false)
     protected Mapper<T> mapper;
 
     /**

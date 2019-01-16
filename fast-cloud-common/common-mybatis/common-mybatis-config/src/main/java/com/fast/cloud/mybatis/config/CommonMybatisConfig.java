@@ -1,8 +1,6 @@
-package com.fast.cloud.biz.mybatis.config;
+package com.fast.cloud.mybatis.config;
 
-import com.fast.cloud.biz.mybatis.config.mapper.MyMapper;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.fast.cloud.mybatis.mapper.MyMapper;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;

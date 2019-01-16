@@ -1,11 +1,11 @@
 package com.fast.cloud.biz.service.mybatis;
 
-import com.fast.cloud.biz.bean.request.CityRequest;
+import com.fast.cloud.biz.bean.request.UserRequest;
 import com.fast.cloud.biz.bean.response.CollectionWithPaginationAndAbstractResponse;
 import com.fast.cloud.biz.bean.vo.UserVo;
 import com.fast.cloud.biz.domain.UserModel;
-import com.fast.cloud.biz.mongo.domain.request.MongoRequest;
-import com.fast.cloud.biz.mybatis.config.service.IService;
+import com.fast.cloud.mybatis.bean.request.MyBatisRequest;
+import com.fast.cloud.mybatis.service.IService;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public interface UserService extends IService<UserModel> {
 
     List<UserVo> queryAll();
 
-    CollectionWithPaginationAndAbstractResponse<UserVo> findPage(MongoRequest<CityRequest> request);
+    CollectionWithPaginationAndAbstractResponse<UserVo> findPage(MyBatisRequest<UserRequest> request);
 
-    List<UserVo> query(MongoRequest<CityRequest> request);
+    List<UserVo> query(MyBatisRequest<UserRequest> request);
 }

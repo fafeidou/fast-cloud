@@ -1,4 +1,4 @@
-package com.fast.cloud.biz.mongo.domain.request;
+package com.fast.cloud.bean;
 
 /**
  * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.

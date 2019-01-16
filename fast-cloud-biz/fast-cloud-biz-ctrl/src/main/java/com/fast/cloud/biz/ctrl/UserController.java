@@ -1,10 +1,10 @@
 package com.fast.cloud.biz.ctrl;
 
-import com.fast.cloud.biz.bean.request.CityRequest;
+import com.fast.cloud.biz.bean.request.UserRequest;
 import com.fast.cloud.biz.bean.response.ApiResponse;
 import com.fast.cloud.biz.bean.response.CollectionWithPaginationAndAbstractResponse;
 import com.fast.cloud.biz.bean.vo.UserVo;
-import com.fast.cloud.biz.mongo.domain.request.MongoRequest;
+import com.fast.cloud.mybatis.bean.request.MyBatisRequest;
 import com.fast.cloud.biz.service.mybatis.UserService;
 import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,12 +57,12 @@ public class UserController {
     }
 
     @RequestMapping(value = ROOT + "/findPage")
-    public ApiResponse<CollectionWithPaginationAndAbstractResponse<UserVo>> findPage(@RequestBody MongoRequest<CityRequest> request) {
+    public ApiResponse<CollectionWithPaginationAndAbstractResponse<UserVo>> findPage(@RequestBody MyBatisRequest<UserRequest> request) {
         return ApiResponse.success(userService.findPage(request));
     }
 
     @RequestMapping(value = ROOT + "find")
-    public ApiResponse<List<UserVo>> find(@RequestBody MongoRequest<CityRequest> request) {
+    public ApiResponse<List<UserVo>> find(@RequestBody MyBatisRequest<UserRequest> request) {
         return ApiResponse.success(userService.query(request));
     }
 }

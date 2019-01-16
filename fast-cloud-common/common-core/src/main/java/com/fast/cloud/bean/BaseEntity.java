@@ -1,22 +1,14 @@
-package com.fast.cloud.biz.mongo.domain.request;
+package com.fast.cloud.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.index.Indexed;
 
 import java.io.Serializable;
 import java.util.Date;
 
 public class BaseEntity<ID extends Serializable> implements Serializable {
 
-    @Id
-    @Indexed
     private String id;
-    @CreatedDate
     private Date createdDate;
-    @LastModifiedDate
     private Date lastModifiedDate;
     private String createdBy;
     private String lastModifiedBy;
