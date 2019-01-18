@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+  profiles:
+    active: dev
+pagehelper:
+  helper-dialect: mysql
+  reasonable: false
+  support-methods-arguments: ture
+  params: count=countSql
+
+#打印sql
+logging:
+  level:
+    com.fast.cloud: debug
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.fast.cloud.mybatis.plus.domain
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    id-type: 3
+    field-strategy: 2
+    db-column-underline: true

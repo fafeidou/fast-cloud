@@ -1,4 +1,4 @@
-package com.fast.cloud.biz.es;
+package com.fast.cloud.es;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -20,6 +20,7 @@
         <module>common-rabbit</module>
         <module>common-redis</module>
         <module>common-solr</module>
+        <module>design-patterns</module>
     </modules>
     <dependencies>
     </dependencies>
@@ -58,6 +59,11 @@
             <dependency>
                 <groupId>com.fast.cloud</groupId>
                 <artifactId>common-solr</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>design-patterns</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>

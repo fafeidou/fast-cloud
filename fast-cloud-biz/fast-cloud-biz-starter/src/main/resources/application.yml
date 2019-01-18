@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.138.52:3306/ckshop?serverTimezone=GMT%2B8
+    url: jdbc:mysql://?serverTimezone=GMT%2B8
     username: root
     password: 123456
   data:

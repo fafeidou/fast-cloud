@@ -1,0 +1,10 @@
+server:
+  port: 8086
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-name: docker-cluster
+      cluster-nodes:
+

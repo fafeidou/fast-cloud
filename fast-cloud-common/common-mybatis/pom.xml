@@ -13,5 +13,6 @@
     <modules>
         <module>common-mybatis-config</module>
         <module>common-mybatis-generator</module>
+        <module>mybatis-plus</module>
     </modules>
 </project>
