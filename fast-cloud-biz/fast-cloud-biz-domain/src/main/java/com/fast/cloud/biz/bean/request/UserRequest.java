@@ -1,7 +1,7 @@
 package com.fast.cloud.biz.bean.request;
 
-import com.fast.cloud.bean.MatchType;
-import com.fast.cloud.bean.QueryCondition;
+import com.fast.cloud.core.bean.MatchType;
+import com.fast.cloud.core.bean.QueryCondition;
 import lombok.Data;
 
 /**

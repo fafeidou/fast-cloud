@@ -1,6 +1,6 @@
 package com.fast.cloud.mongo.service;
 
-import com.fast.cloud.bean.AbstractRequest;
+import com.fast.cloud.core.bean.AbstractRequest;
 import org.springframework.data.domain.*;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationResults;

@@ -1,6 +1,6 @@
 package com.fast.cloud.biz.domain;
 
-import com.fast.cloud.bean.BaseEntity;
+import com.fast.cloud.core.bean.BaseEntity;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 

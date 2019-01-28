@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://?serverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.138.52:3306/ckshop?serverTimezone=GMT%2B8
     username: root
     password: 123456
   data:
@@ -35,3 +35,18 @@ pagehelper:
 logging:
   level:
     com.fast.cloud: debug
+
+ck:
+  swagger:
+    title: APIs
+    description: 微服务<font color="red">test模块</font>接口文档
+    version: 1.0
+    modules:
+      - {
+        model-name: ck-content,
+        packages: ["com.fast.cloud.biz.controller"],
+        group-name: ck-content,
+        name: ck-content,
+        location: "/admin/service-content/v2/api-docs?group=ck-content",
+        version: 2.0
+      }

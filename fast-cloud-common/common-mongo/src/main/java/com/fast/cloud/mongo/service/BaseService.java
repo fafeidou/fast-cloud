@@ -1,7 +1,7 @@
 package com.fast.cloud.mongo.service;
 
-import com.fast.cloud.bean.AbstractRequest;
-import com.fast.cloud.bean.BaseEntity;
+import com.fast.cloud.core.bean.AbstractRequest;
+import com.fast.cloud.core.bean.BaseEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

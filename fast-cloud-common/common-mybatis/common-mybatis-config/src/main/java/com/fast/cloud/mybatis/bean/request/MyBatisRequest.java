@@ -1,7 +1,7 @@
 package com.fast.cloud.mybatis.bean.request;
 
-import com.fast.cloud.bean.AbstractRequest;
-import com.fast.cloud.bean.QueryCondition;
+import com.fast.cloud.core.bean.AbstractRequest;
+import com.fast.cloud.core.bean.QueryCondition;
 import tk.mybatis.mapper.entity.Example;
 
 import java.lang.reflect.Field;

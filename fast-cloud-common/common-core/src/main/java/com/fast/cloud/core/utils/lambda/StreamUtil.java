@@ -1,0 +1,196 @@
+package com.fast.cloud.core.utils.lambda;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.CollectionUtils;
+
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toMap;
+
+/**
+ * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
+ * @author Batman.qin
+ * @create 2019-01-11 9:36
+ */
+public class StreamUtil {
+    /**
+     * 集合转换成List
+     */
+    public static <T, R> List<R> mapToList(Collection<T> data, Function<T, R> mapFunc) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().map(mapFunc).collect(Collectors.toList());
+        }
+        return Collections.emptyList();
+    }
+
+    /**
+     * 将集合转换成Set
+     */
+    public static <T, R> Set<R> mapToSet(Collection<T> data, Function<T, R> mapFunc) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().map(mapFunc).collect(Collectors.toSet());
+        }
+        return Collections.emptySet();
+    }
+
+    /**
+     * join
+     */
+    public static <T> String mapToJoin(Collection<T> data, Function<T, String> function, String delimiter) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().map(function).collect(joining(delimiter));
+        }
+        return StringUtils.EMPTY;
+    }
+
+    /**
+     * 集合转换LinkedHashMap
+     */
+    public static <DATA, KEY, VALUE> LinkedHashMap<KEY, VALUE> collectToLinkedHashMap(Collection<DATA> data,
+                                                                                      Function<DATA, KEY> key,
+                                                                                      Function<DATA, VALUE> value) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().collect(toMap(key, value, (t1, t2) -> t1, LinkedHashMap::new));
+        }
+        return null;
+    }
+
+    /**
+     * 集合转换LinkedHashMap
+     */
+    public static <DATA, KEY> LinkedHashMap<KEY, DATA> collectToLinkedHashMap(Collection<DATA> data,
+                                                                              Function<DATA, KEY> key) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().collect(toMap(key, Function.identity(), (t1, t2) -> t1, LinkedHashMap::new));
+        }
+        return null;
+    }
+
+    /**
+     * 集合转换Map
+     */
+    public static <DATA, KEY> Map<KEY, DATA> collectToMap(Collection<DATA> data,
+                                                          Function<DATA, KEY> key) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().collect(toMap(key, Function.identity(), (t1, t2) -> t1));
+        }
+        return null;
+    }
+
+    /**
+     * 集合转换Map
+     */
+    public static <DATA, KEY, VALUE> Map<KEY, VALUE> collectToMap(Collection<DATA> data,
+                                                                  Function<DATA, KEY> key,
+                                                                  Function<DATA, VALUE> value) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().collect(toMap(key, value, (t1, t2) -> t1));
+        }
+        return Collections.EMPTY_MAP;
+    }
+
+    /**
+     * 求和
+     */
+    public static <DATA> Long counting(Collection<DATA> data) {
+        if (!CollectionUtils.isEmpty(data)) {
+            return data.stream().collect(Collectors.counting());
+        }
+        return null;
+    }
+
+    /**
+     * map 中的value转换成List
+     */
+    public static <K, V> List<V> convertMapValuesToList(Map<K, V> map) {
+        List<V> result = new ArrayList<>();
+        map.values().stream().forEach(result::add);
+        return result;
+    }
+
+    /**
+     * map 中的key 转换成List
+     */
+    public static <K, V> List<K> convertMapKeysToList(Map<K, V> map) {
+        List<K> result = new ArrayList<>();
+        map.keySet().stream().forEach(result::add);
+        return result;
+    }
+
+    private StreamUtil() { /** prevent instantiation */}
+
+    /**
+     * Convert an {@link Optional} to a {@link Stream}
+     * @param optional the optional to convert to a stream
+     * @param <T> the type of the element
+     * @return a stream containing the optional's value or empty stream if not present
+     */
+    public static <T> Stream<T> asStream(Optional<T> optional) {
+        return optional.map(Stream::of).orElse(Stream.empty());
+    }
+
+    /**
+     * Convert an {@link Iterator} to a {@link Stream}.
+     *
+     * @param iterator the iterator to convert to a stream
+     * @param <T> the type of a single element
+     * @return a stream containing the values of the iterator
+     */
+    public static <T> Stream<T> asStream(Iterator<T> iterator) {
+        return asStream(iterator, false);
+    }
+
+    /**
+     * Convert an {@link Iterator} to a {@link Stream}.
+     * @param iterator the iterator to convert to a stream
+     * @param <T> the type of a single element
+     * @param parallel if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream.
+     * @return a stream containing the values of the iterator
+     */
+    public static <T> Stream<T> asStream(Iterator<T> iterator, boolean parallel) {
+        return asStream(() -> iterator, parallel);
+    }
+
+    /**
+     * Convert an {@link Iterable} to a {@link Stream}
+     * @param iterable the iterable to convert
+     * @param <T> the type of a single element
+     * @return a (non-parallel) stream containing the values of the iterable
+     */
+    public static <T> Stream<T> asStream(Iterable<T> iterable) {
+        return asStream(iterable, false);
+    }
+
+    /**
+     * Convert an {@link Iterable} to a {@link Stream}
+     * @param iterable the iterable to convert
+     * @param parallel if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream.
+     * @param <T> the type of a single element
+     * @return a stream containing the values of the iterable
+     */
+    public static <T> Stream<T> asStream(Iterable<T> iterable, boolean parallel) {
+        return Optional.ofNullable(iterable)
+                .map(it -> StreamSupport.stream(it.spliterator(), parallel))
+                .orElse(Stream.empty());
+    }
+
+    /**
+     * Concatenate the given streams to a single stream. Follows the semantics
+     * of {@link Stream#concat(Stream, Stream)}.
+     * @param streams the streams to concatenate
+     * @param <T> type of the stream element
+     * @return a stream containing all of the elements in all of the streams
+     */
+    @SafeVarargs
+    public static <T> Stream<T> concat(Stream<T> ...streams) {
+        return Stream.of(streams)
+                .filter(Objects::nonNull)
+                .reduce(Stream::concat).get();
+    }
+}

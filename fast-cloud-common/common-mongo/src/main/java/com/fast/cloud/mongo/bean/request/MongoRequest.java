@@ -1,7 +1,7 @@
 package com.fast.cloud.mongo.bean.request;
 
-import com.fast.cloud.bean.AbstractRequest;
-import com.fast.cloud.bean.QueryCondition;
+import com.fast.cloud.core.bean.AbstractRequest;
+import com.fast.cloud.core.bean.QueryCondition;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.util.CollectionUtils;

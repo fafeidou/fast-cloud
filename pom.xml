@@ -36,8 +36,35 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.M3</spring-cloud.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <fastJson.version>1.2.54</fastJson.version>
+        <swagger.version>2.9.2</swagger.version>
+        <common.bean.version>1.9.2</common.bean.version>
+        <okhttp.version>3.10.0</okhttp.version>
+        <fastJson.version>1.2.54</fastJson.version>
+        <gson.version>2.8.5</gson.version>
+        <commons.io>1.3.2</commons.io>
+        <commons-io.version>1.3.2</commons-io.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <common.bean.version>1.9.2</common.bean.version>
+        <jwt.version>0.9.1</jwt.version>
+        <commons-collections4.version>4.1</commons-collections4.version>
+        <poi.version>3.15</poi.version>
+        <poi-ooxml.version>3.15</poi-ooxml.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <fastJson.version>1.2.54</fastJson.version>
+        <swagger.version>2.9.2</swagger.version>
+        <qiniu.version>7.2.11</qiniu.version>
+        <aliyun.sdk.oss.version>3.0.0</aliyun.sdk.oss.version>
+        <cos.api.version>4.4</cos.api.version>
+        <json.lib>2.4</json.lib>
+        <spring-data-commons.version>2.1.3.RELEASE</spring-data-commons.version>
+        <joda.time.version>2.9.9</joda.time.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <feign.okhttp.version>9.5.1</feign.okhttp.version>
+        <zxing.core.version>3.2.0</zxing.core.version>
+        <zxing.javase.version>3.3.2</zxing.javase.version>
+        <mail.version>1.4.7</mail.version>
     </properties>
 
     <dependencies>
