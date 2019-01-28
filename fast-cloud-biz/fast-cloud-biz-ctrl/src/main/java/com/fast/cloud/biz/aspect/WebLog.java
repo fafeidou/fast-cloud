@@ -1,4 +1,4 @@
-package com.fast.cloud.biz.controller;
+package com.fast.cloud.biz.aspect;
 
 /**
  * Controller层的日志封装类

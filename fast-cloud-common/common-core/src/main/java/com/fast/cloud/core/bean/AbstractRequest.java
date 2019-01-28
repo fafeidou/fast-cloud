@@ -3,6 +3,7 @@ package com.fast.cloud.core.bean;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+import javax.validation.Valid;
 import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public abstract class AbstractRequest<T> implements Serializable, Pageable {
     protected Integer pageNumber = 1;
     protected Integer pageSize = 10;
     protected Sort sort;
+    @Valid
     protected T requestModel;
     protected String sortName;
     protected int sortOrder;

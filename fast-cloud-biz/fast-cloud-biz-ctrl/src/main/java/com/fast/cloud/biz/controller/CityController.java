@@ -4,15 +4,17 @@ import com.fast.cloud.biz.bean.request.CityRequest;
 import com.fast.cloud.biz.bean.response.ApiResponse;
 import com.fast.cloud.biz.bean.response.CollectionWithPaginationAndAbstractResponse;
 import com.fast.cloud.biz.bean.vo.CityVo;
-import com.fast.cloud.mongo.bean.request.MongoRequest;
 import com.fast.cloud.biz.service.mongo.CityService;
+import com.fast.cloud.mongo.bean.request.MongoRequest;
 import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
@@ -22,7 +24,7 @@ import java.util.List;
  * @author Batman.qin
  * @create 2019-01-14 18:03
  */
-@Controller
+@RestController
 public class CityController {
     public static final String ROOT = "admin/city/";
 
@@ -58,12 +60,17 @@ public class CityController {
     }
 
     @RequestMapping(value = ROOT + "/findPage")
-    public ApiResponse<CollectionWithPaginationAndAbstractResponse<CityVo>> findPage(@RequestBody MongoRequest<CityRequest> request) {
+    public ApiResponse<CollectionWithPaginationAndAbstractResponse<CityVo>> findPage(@RequestBody @Valid MongoRequest<CityRequest> request, BindingResult result) {
         return ApiResponse.success(cityService.findPage(request));
     }
 
     @RequestMapping(value = ROOT + "find")
     public ApiResponse<List<CityVo>> find(@RequestBody MongoRequest<CityRequest> request) {
         return ApiResponse.success(cityService.query(request));
+    }
+
+    @RequestMapping(value = ROOT + "test")
+    public ApiResponse<List<CityVo>> test(@RequestBody @Valid CityRequest request, BindingResult result) {
+        return null;
     }
 }
