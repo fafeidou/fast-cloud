@@ -1,33 +1,25 @@
-package com.fast.cloud.biz.bean.response;
+package com.fast.cloud.biz.bean;
 
-import com.fast.cloud.core.utils.gson.GsonUtil;
-import lombok.Data;
+import com.fast.cloud.biz.bean.response.ApiResponse;
+import com.fast.cloud.biz.config.SpringContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.validation.BindingResult;
 
-import java.io.Serializable;
 import java.util.Locale;
 
 /**
  * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
  *
  * @author Batman.qin
- * @create 2019-01-15 9:16
+ * @create 2018-12-28 13:38
  */
-@Data
-public class ApiResponse<T> implements Serializable {
-    private T data;
-    private Integer code;
-    private String message;
-    //参数校验失败
-    public static final int VALIDATE_FAILED = 404;
+public class MessageResponse<T> extends ApiResponse {
 
-    public static <T> ApiResponse<T> success(T result) {
-        ApiResponse<T> response = new ApiResponse<T>();
-        response.setData(result);
-        response.setCode(0);
-        return response;
+    public static String getMessage(String messageCode) {
+        MessageSource messageSource = SpringContext.getBean(MessageSource.class);
+        Locale locale = LocaleContextHolder.getLocale();
+        return messageSource.getMessage(messageCode, null, locale);
     }
 
     /**
@@ -47,13 +39,8 @@ public class ApiResponse<T> implements Serializable {
     public static ApiResponse validateFailed(String message) {
         ApiResponse response = new ApiResponse();
         response.setCode(VALIDATE_FAILED);
-        response.setMessage(message);
+        response.setMessage(getMessage(message));
         return response;
-    }
-
-    @Override
-    public String toString() {
-        return GsonUtil.toJson(this);
     }
 
 }

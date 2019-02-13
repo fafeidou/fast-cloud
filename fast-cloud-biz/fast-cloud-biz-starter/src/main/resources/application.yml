@@ -11,6 +11,8 @@ spring:
       database: test
   profiles:
     active: dev
+  messages:
+    basename: i18n/messages
 mybatis:
   mapper-locations: #mapper/*Mapper.xml
   type-aliases-package: #com.fast.cloud.biz.bean.*

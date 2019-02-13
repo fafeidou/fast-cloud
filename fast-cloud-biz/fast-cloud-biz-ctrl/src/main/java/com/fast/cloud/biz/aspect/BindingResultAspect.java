@@ -1,6 +1,6 @@
 package com.fast.cloud.biz.aspect;
 
-import com.fast.cloud.biz.bean.response.ApiResponse;
+import com.fast.cloud.biz.bean.MessageResponse;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -27,7 +27,7 @@ public class BindingResultAspect {
             if (arg instanceof BindingResult) {
                 BindingResult result = (BindingResult) arg;
                 if (result.hasErrors()) {
-                    return ApiResponse.validateFailed(result);
+                    return MessageResponse.validateFailed(result);
                 }
             }
         }
