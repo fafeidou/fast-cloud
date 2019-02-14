@@ -2,8 +2,8 @@ package ${dao_package};
 
 import ${model_package}.${className};
 
-import com.batman.bysj.common.dao.mybatis.MyMapper;
-import com.batman.bysj.common.model.ComCode;
+import com.fast.cloud.biz.domain.${className};
+import com.fast.cloud.mybatis.mapper.MyMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

@@ -1,12 +1,12 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.138.52:3306/ckshop?serverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.32.111:3306/mall?serverTimezone=GMT%2B8
     username: root
     password: 123456
   data:
     mongodb:
-      host: 192.168.138.54
+      host: 192.168.32.111
       port: 27017
       database: test
   profiles:

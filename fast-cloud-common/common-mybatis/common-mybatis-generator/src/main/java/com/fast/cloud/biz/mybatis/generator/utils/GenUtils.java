@@ -187,7 +187,7 @@ public class GenUtils {
             packagePath += packageName.replace(".", File.separator) + File.separator;
         }
 
-        if (template.contains("bean.java.vm")) {
+        if (template.contains("domain.java.vm")) {
             return "model" + File.separator + className + ".java";
         }
 

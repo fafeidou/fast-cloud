@@ -99,7 +99,9 @@ public class MyBatisRequest<T> extends AbstractRequest<T> {
             }
         }
         //设置fields
-        example.selectProperties(needFieldList);
+        if (needFieldList.length > 0 && needFieldList != null) {
+            example.selectProperties(needFieldList);
+        }
         return example;
     }
 }
