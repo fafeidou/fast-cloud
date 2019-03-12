@@ -9,6 +9,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
@@ -25,8 +26,8 @@ feign:
   hystrix:
     enabled: true
 ribbon:
-  ConnectTimeout: 6000
-  ReadTimeout: 6000
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 hystrix:
@@ -36,4 +37,4 @@ hystrix:
         timeout:
         isolation:
           thread:
-            timeoutInMilliseconds: 15000
+            timeoutInMilliseconds: 150000
