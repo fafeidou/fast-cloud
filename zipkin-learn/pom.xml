@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>service-producer</module>
-        <module>zipkin-server</module>
+        <module>service-comsumer</module>
     </modules>
     <dependencies>
         <dependency>
