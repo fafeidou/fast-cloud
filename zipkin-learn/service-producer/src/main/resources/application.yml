@@ -10,8 +10,8 @@ spring:
         enabled: true
     sampler:
       probability: 1.0
-  zipkin:
-    base-url: http://192.168.32.111:9411/
+#  zipkin:
+#    base-url: http://192.168.32.111:9411/
 eureka:
   client:
     serviceUrl:

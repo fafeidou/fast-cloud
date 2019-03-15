@@ -21,6 +21,7 @@
         <module>common-redis</module>
         <module>common-solr</module>
         <module>design-patterns</module>
+        <module>fast-elk</module>
     </modules>
     <dependencies>
     </dependencies>
