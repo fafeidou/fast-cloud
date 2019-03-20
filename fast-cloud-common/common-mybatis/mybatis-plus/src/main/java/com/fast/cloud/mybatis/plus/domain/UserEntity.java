@@ -7,22 +7,22 @@ package com.fast.cloud.mybatis.plus.domain;
  * @create 2019-01-17 15:09
  */
 
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
 @EqualsAndHashCode(callSuper = true)
-@TableName("test_user")
+@TableName("sys_user")
 @Data
 public class UserEntity extends Model<UserEntity> implements Serializable {
 
-    @TableId(value = "id")
+    @TableId(value = "user_id")
     private String id;
-    private String userName;
+    private String username;
     private String password;
     //省略set get方法
 
@@ -35,7 +35,7 @@ public class UserEntity extends Model<UserEntity> implements Serializable {
     public String toString() {
         return "UserEntity{" +
                 "id=" + id +
-                ", name='" + userName + '\'' +
+                ", name='" + username + '\'' +
                 ", createTime=" + password +
                 '}';
     }

@@ -57,7 +57,7 @@ public class UserServiceImpl extends BaseService<UserModel> implements UserServi
 
     @Override
     public CollectionWithPaginationAndAbstractResponse<UserVo> findPage(MyBatisRequest<UserRequest> request) {
-        ISelect select = () -> mapper.selectByExample(request.getExample(UserModel.class, "id", "userName"));
+        ISelect select = () -> mapper.selectByExample(request.getExample(UserModel.class, "id", "username"));
 
         Page<UserModel> userModelPage = PageHelper.startPage(request.getPageNumber(), request.getPageSize())
                 .doSelectPage(select);
@@ -80,7 +80,7 @@ public class UserServiceImpl extends BaseService<UserModel> implements UserServi
     @Override
     public List<UserVo> query(MyBatisRequest<UserRequest> request) {
         return Optional
-                .ofNullable(mapper.selectByExample(request.getExample(UserModel.class, "id", "userName")))
+                .ofNullable(mapper.selectByExample(request.getExample(UserModel.class, "id", "username")))
                 .get()
                 .stream()
                 .map(i -> userVoConverter().apply(i))
