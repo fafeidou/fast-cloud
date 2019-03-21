@@ -22,6 +22,7 @@
         <module>common-solr</module>
         <module>design-patterns</module>
         <module>fast-elk</module>
+        <module>common-task</module>
     </modules>
     <dependencies>
     </dependencies>
