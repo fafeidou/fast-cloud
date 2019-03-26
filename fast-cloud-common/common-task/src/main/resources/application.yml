@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.32.111:3306/tast_test?&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  profiles:
+    active: dev
+  quartz:
+    #持久化到数据库方式
+    job-store-type: jdbc
+    initialize-schema: embedded
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: RenrenScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+pagehelper:
+  helper-dialect: mysql
+  reasonable: false
+  support-methods-arguments: ture
+  params: count=countSql
+
+#打印sql
+logging:
+  level:
+    com.fast.cloud: debug
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.fast.cloud.common.quarz.entity
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    id-type: 3
+    field-strategy: 2
+    db-column-underline: true

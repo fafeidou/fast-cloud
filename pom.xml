@@ -65,6 +65,7 @@
         <zxing.core.version>3.2.0</zxing.core.version>
         <zxing.javase.version>3.3.2</zxing.javase.version>
         <mail.version>1.4.7</mail.version>
+        <quartz.version>2.3.0</quartz.version>
     </properties>
 
     <dependencies>
