@@ -6,12 +6,12 @@ dynamic:
       url: jdbc:mysql://192.168.32.111:3306/bootdo?&serverTimezone=GMT%2B8
       username: root
       password: root
-#    slave2:
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-#      type: com.alibaba.druid.pool.DruidDataSource
-#      url: jdbc:mysql://192.168.32.111:3306/renren_security?&serverTimezone=GMT%2B8
-#      username: root
-#      password: root
+    slave2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://192.168.32.111:3306/renren_security?&serverTimezone=GMT%2B8
+      username: root
+      password: root
 
 
 spring:
@@ -22,3 +22,24 @@ spring:
       url: jdbc:mysql://192.168.32.111:3306/renren_security?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
       password: root
+    profiles:
+      active: dev
+  pagehelper:
+    helper-dialect: mysql
+    reasonable: false
+    support-methods-arguments: ture
+    params: count=countSql
+
+#打印sql
+logging:
+  level:
+    com.fast.cloud: debug
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.fast.cloud.mybatis.plus.domain
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    id-type: 3
+    field-strategy: 2
+    db-column-underline: true

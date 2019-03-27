@@ -8,6 +8,8 @@
 
 package com.fast.cloud.dynamic.datasource.mysql.annotation;
 
+import com.fast.cloud.dynamic.datasource.mysql.enums.DataSourceEnum;
+
 import java.lang.annotation.*;
 
 /**
@@ -21,5 +23,5 @@ import java.lang.annotation.*;
 @Documented
 @Inherited
 public @interface DataSource {
-    String value() default "";
+    DataSourceEnum value() default DataSourceEnum.DB1;
 }

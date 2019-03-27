@@ -10,6 +10,7 @@ package com.fast.cloud.dynamic.datasource.mysql.aspect;
 
 import com.fast.cloud.dynamic.datasource.mysql.annotation.DataSource;
 import com.fast.cloud.dynamic.datasource.mysql.config.DynamicContextHolder;
+import com.fast.cloud.dynamic.datasource.mysql.enums.DataSourceEnum;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -50,7 +51,7 @@ public class DataSourceAspect {
         DataSource targetDataSource = (DataSource) targetClass.getAnnotation(DataSource.class);
         DataSource methodDataSource = method.getAnnotation(DataSource.class);
         if (targetDataSource != null || methodDataSource != null) {
-            String value;
+            DataSourceEnum value;
             if (methodDataSource != null) {
                 value = methodDataSource.value();
             } else {

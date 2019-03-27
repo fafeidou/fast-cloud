@@ -1,12 +1,14 @@
 /**
  * Copyright (c) 2018 人人开源 All rights reserved.
- *
+ * <p>
  * https://www.renren.io
- *
+ * <p>
  * 版权所有，侵权必究！
  */
 
 package com.fast.cloud.dynamic.datasource.mysql.config;
+
+import com.fast.cloud.dynamic.datasource.mysql.enums.DataSourceEnum;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -39,8 +41,8 @@ public class DynamicContextHolder {
      *
      * @param dataSource 数据源名称
      */
-    public static void push(String dataSource) {
-        CONTEXT_HOLDER.get().push(dataSource);
+    public static void push(DataSourceEnum dataSource) {
+        CONTEXT_HOLDER.get().push(dataSource.getValue());
     }
 
     /**
