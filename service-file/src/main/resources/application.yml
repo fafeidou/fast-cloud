@@ -1,6 +1,6 @@
 server:
   port: 8764
-
+  connection-timeout: 120000
 spring:
   application:
     name: service-file

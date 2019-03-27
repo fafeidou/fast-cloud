@@ -2,6 +2,7 @@ package com.fast.cloud.biz.api.gateway;
 
 import lombok.extern.slf4j.Slf4j;
 import org.reactivestreams.Publisher;
+import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
@@ -32,7 +33,7 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 @Slf4j
 @Component
-public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
+public class AccessLogGlobalFilter implements GatewayFilter, Ordered {
 
     private static final String REQUEST_PREFIX = "Request Info [ ";
 
@@ -91,16 +92,17 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
                         return bufferFactory.wrap(content);
                     }));
                 }
-                return super.writeWith(body); // if body is not a flux. never got there.
+                // if body is not a flux. never got there.
+                return super.writeWith(body);
             }
         };
-
+        // return chain.filter(exchange);
         return chain.filter(exchange.mutate().request(requestDecorator).response(decoratedResponse).build());
     }
 
     @Override
     public int getOrder() {
-        return -2;
+        return 5;
     }
 
 }

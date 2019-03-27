@@ -23,6 +23,7 @@
         <module>design-patterns</module>
         <module>fast-elk</module>
         <module>common-task</module>
+        <module>common-dynamic-datasource-mysql</module>
     </modules>
     <dependencies>
     </dependencies>

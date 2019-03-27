@@ -15,6 +15,16 @@ spring:
           filters:
             - SwaggerHeaderFilter
             - StripPrefix=1
+        - id: service-file
+          uri: lb://service-file
+          predicates:
+            - Path=/service-file/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
+
+
+
 server:
   port: 9000
 eureka:

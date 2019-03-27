@@ -1,0 +1,24 @@
+dynamic:
+  datasource:
+    slave1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://192.168.32.111:3306/bootdo?&serverTimezone=GMT%2B8
+      username: root
+      password: root
+#    slave2:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      url: jdbc:mysql://192.168.32.111:3306/renren_security?&serverTimezone=GMT%2B8
+#      username: root
+#      password: root
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.32.111:3306/renren_security?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: root
