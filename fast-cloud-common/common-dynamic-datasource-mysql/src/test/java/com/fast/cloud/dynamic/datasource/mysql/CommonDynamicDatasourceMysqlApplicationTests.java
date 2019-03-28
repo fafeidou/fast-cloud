@@ -2,6 +2,7 @@ package com.fast.cloud.dynamic.datasource.mysql;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fast.cloud.dynamic.datasource.mysql.annotation.DataSource;
+import com.fast.cloud.dynamic.datasource.mysql.service.UserService;
 import com.fast.cloud.mybatis.plus.dao.SysUserDao;
 import com.fast.cloud.mybatis.plus.dao.UserMapper;
 import com.fast.cloud.mybatis.plus.domain.SysUserEntity;
@@ -15,8 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.fast.cloud.dynamic.datasource.mysql.enums.DataSourceEnum.DB1;
 import static com.fast.cloud.dynamic.datasource.mysql.enums.DataSourceEnum.DB2;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CommonDynamicDatasourceMysqlApplicationTests {
@@ -25,12 +26,21 @@ public class CommonDynamicDatasourceMysqlApplicationTests {
     @Autowired
     SysUserDao sysUserDao;
 
-    @Transactional
-    @DataSource(DB1)
+    @Autowired
+    UserService userService;
+
     @Test
-    public void updateUserBySlave1() {
-        List<UserEntity> userEntities = userMapper.selectList(new QueryWrapper<>());
+    public void selectList() {
+        List<UserEntity> userEntities1 = userService.selectList();
         System.out.println();
+    }
+
+    @Test
+    public void updateUser() {
+        UserEntity userEntity = userService.getById("136");
+        userEntity.setUsername("修改数据test");
+        int i = userService.updateUser(userEntity);
+        System.out.println(i);
     }
 
     @Transactional
