@@ -137,8 +137,12 @@ public class FastCloudBizStarterApplicationTests {
 
     @Test
     public void testAdmin() {
-        List<UmsAdmin> umsAdmins = umsAdminMapper.selectAll();
-        System.out.println(GsonUtil.toJson(umsAdmins));
+//        List<UmsAdmin> umsAdmins = umsAdminMapper.selectAll();
+        UmsAdmin umsAdmin = new UmsAdmin();
+        umsAdmin.setId(1l);
+        umsAdmin.setEmail("sdfsdfs");
+        umsAdminMapper.updateByPrimaryKeySelective(umsAdmin);
+//        System.out.println(GsonUtil.toJson(umsAdmins));
     }
 
 }

@@ -1,5 +1,6 @@
 package com.fast.cloud.biz.domain;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,6 +17,7 @@ public class UmsAdmin  implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//
+	@Id
 	private Long id;
 	//
 	private String username;
