@@ -52,3 +52,11 @@ ck:
         location: "/admin/service-content/v2/api-docs?group=ck-content",
         version: 2.0
       }
+  test:
+    map-config:
+      hello:
+        hello: hello
+        aaa: aaa
+      master:
+        hello: master
+        aaa: masterAAA
