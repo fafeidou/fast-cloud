@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.32.111:3306/tast_test?&serverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.32.111:3306/renren_security?&serverTimezone=GMT%2B8
     username: root
     password: root
   profiles:
@@ -39,7 +39,7 @@ logging:
   level:
     com.fast.cloud: debug
 mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:job/*.xml
   type-aliases-package: com.fast.cloud.common.quarz.entity
   configuration:
     map-underscore-to-camel-case: true
@@ -47,3 +47,17 @@ mybatis-plus:
     id-type: 3
     field-strategy: 2
     db-column-underline: true
+ck:
+  swagger:
+    title: CHARLES-KEITH RESTful Orders APIs
+    description: 桦洁商贸电子商务微服务<font color="red">订单</font>接口文档
+    version: 1.0
+    modules:
+    - {
+       model-name: order-front,
+       packages: ["com.charleskeith.microservice.order.front.controller","com.charleskeith.microservice.order.client.app"],
+       group-name: order-front,
+       name: order-front,
+       location: "/app/order-front/v2/api-docs?group=order-front",
+       version: 2.0
+      }

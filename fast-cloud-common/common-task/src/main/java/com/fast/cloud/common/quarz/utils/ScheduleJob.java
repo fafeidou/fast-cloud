@@ -1,10 +1,4 @@
-/**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
- * <p>
- * https://www.renren.io
- * <p>
- * 版权所有，侵权必究！
- */
+/**  * @author Batman.qin  */
 
 package com.fast.cloud.common.quarz.utils;
 
@@ -13,8 +7,6 @@ import com.fast.cloud.common.quarz.entity.ScheduleJobLogEntity;
 import com.fast.cloud.common.quarz.service.ScheduleJobLogService;
 import com.fast.cloud.core.utils.SpringContextUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.quartz.JobDataMap;
-import org.quartz.JobDetail;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
@@ -28,14 +20,13 @@ import java.util.Date;
 /**
  * 定时任务
  *
- * @author Mark sunlightcs@gmail.com
  */
 public class ScheduleJob extends QuartzJobBean {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-        ScheduleJobEntity scheduleJob = (ScheduleJobEntity)context.getMergedJobDataMap()
+        ScheduleJobEntity scheduleJob = (ScheduleJobEntity) context.getMergedJobDataMap()
                 .get(ScheduleJobEntity.JOB_PARAM_KEY);
 
         //获取spring bean

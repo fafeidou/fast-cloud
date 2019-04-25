@@ -10,6 +10,7 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -45,6 +46,7 @@ import static com.google.common.collect.Lists.newArrayList;
 @EnableSwagger2
 @EnableConfigurationProperties(value = SwaggerConfig.class)
 @EnableAutoConfiguration
+@ConditionalOnBean(SwaggerConfig.class)
 public class CkSwaggerAutoConfiguration implements ApplicationContextAware {
     private Logger logger = LoggerFactory.getLogger(CkSwaggerAutoConfiguration.class);
     private final SwaggerConfig swaggerConfig;

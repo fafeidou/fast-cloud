@@ -1,6 +1,14 @@
 spring:
   application:
     name: api-gateway
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://192.168.32.111:9411/
   cloud:
     gateway:
       discovery:
@@ -22,8 +30,6 @@ spring:
           filters:
             - SwaggerHeaderFilter
             - StripPrefix=1
-
-
 
 server:
   port: 9000

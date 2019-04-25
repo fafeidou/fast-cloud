@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
@@ -23,13 +24,13 @@ import java.util.Date;
 /**
  * 定时任务
  *
- * @author Mark sunlightcs@gmail.com
  */
 @Data
 @TableName("schedule_job")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Component
 public class ScheduleJobEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 

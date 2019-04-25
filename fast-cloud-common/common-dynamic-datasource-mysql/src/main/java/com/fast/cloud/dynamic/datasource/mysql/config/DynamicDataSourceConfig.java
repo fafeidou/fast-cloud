@@ -23,7 +23,6 @@ import java.util.Map;
 /**
  * 配置多数据源
  *
- * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
 @Configuration

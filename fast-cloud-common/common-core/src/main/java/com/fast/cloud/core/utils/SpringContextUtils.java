@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 /**
  * Spring Context 工具类
  *
- * @author Mark sunlightcs@gmail.com
  */
 @Component
 public class SpringContextUtils implements ApplicationContextAware {

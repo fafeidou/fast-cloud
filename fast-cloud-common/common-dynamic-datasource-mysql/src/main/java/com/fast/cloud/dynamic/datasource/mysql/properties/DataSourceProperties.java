@@ -11,7 +11,6 @@ package com.fast.cloud.dynamic.datasource.mysql.properties;
 /**
  * 多数据源属性
  *
- * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
 public class DataSourceProperties {
