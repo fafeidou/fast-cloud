@@ -24,6 +24,7 @@
         <module>fast-elk</module>
         <module>common-task</module>
         <module>common-dynamic-datasource-mysql</module>
+        <module>common-rocket</module>
     </modules>
     <dependencies>
     </dependencies>
@@ -67,6 +68,11 @@
             <dependency>
                 <groupId>com.fast.cloud</groupId>
                 <artifactId>design-patterns</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>common-rocket</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
