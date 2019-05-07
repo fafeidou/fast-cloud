@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * xml解析工具类
  *
  * @author batman.qin

@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-03-14 10:14

@@ -8,7 +8,7 @@ import com.fast.cloud.mybatis.bean.request.MyBatisRequest;
 import com.fast.cloud.mybatis.service.IService;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-02-14 13:51

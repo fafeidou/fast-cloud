@@ -13,7 +13,7 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toMap;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-11 9:36

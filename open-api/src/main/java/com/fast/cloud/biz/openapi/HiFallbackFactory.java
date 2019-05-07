@@ -7,7 +7,7 @@
 //import org.springframework.stereotype.Component;
 //
 ///**
-// * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+// *
 // *
 // * @author Batman.qin
 // * @create 2019-02-25 9:32

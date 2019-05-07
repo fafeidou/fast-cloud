@@ -3,7 +3,7 @@ package com.fast.cloud.biz.kafka.domain;
 import java.util.Date;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-03-14 9:55

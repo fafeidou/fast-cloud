@@ -4,7 +4,7 @@ import com.fast.cloud.ordinary.domain.AppGoods;
 import com.fast.cloud.ordinary.service.AppGoodsService;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-03-28 10:12

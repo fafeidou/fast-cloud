@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * 邮件发送工具
  * 1．SMTP（递送邮件机制）
  * 简单邮件传输协议

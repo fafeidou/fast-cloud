@@ -1,7 +1,7 @@
 package com.fast.cloud.mongo.config;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-03 17:07

@@ -3,7 +3,7 @@ package com.fast.cloud.biz.bean.vo;
 import java.util.Date;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-02-14 14:22

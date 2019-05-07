@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2018-12-10 16:18

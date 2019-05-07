@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author batman.qin
  */

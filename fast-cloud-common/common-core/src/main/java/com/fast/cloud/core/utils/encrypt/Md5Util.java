@@ -14,7 +14,7 @@ import java.security.NoSuchAlgorithmException;
 
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * md5加密工具类
  * MD5的全称是Message-Digest Algorithm 5（信息-摘要算法）
  * 默认为128bit

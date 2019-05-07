@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.Arrays;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * io工具类
  *
  * @author batman.qin

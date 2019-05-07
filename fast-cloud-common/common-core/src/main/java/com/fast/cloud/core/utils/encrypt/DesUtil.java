@@ -9,7 +9,7 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * DES加密工具类
  * ES是一种对称加密算法，所谓对称加密算法即：加密和解密使用相同密钥的算法
  * 注意：DES加密和解密过程中，密钥长度都必须是8的倍数  密匙长度是56位

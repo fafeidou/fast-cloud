@@ -14,7 +14,7 @@ import java.util.*;
 
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * rsa加密算法
  *
  * @author batman.qin

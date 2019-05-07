@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @Create 2018-11-30 14:42

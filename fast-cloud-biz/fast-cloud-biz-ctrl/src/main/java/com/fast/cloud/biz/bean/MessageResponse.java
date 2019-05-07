@@ -9,7 +9,7 @@ import org.springframework.validation.BindingResult;
 import java.util.Locale;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2018-12-28 13:38

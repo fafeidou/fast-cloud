@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * http请求工具类
  *
  * @author batman.qin

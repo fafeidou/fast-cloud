@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.fast.cloud</groupId>
+        <artifactId>fast-cloud</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.fast.cloud</groupId>
+    <artifactId>fast-cloud-biz-react</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>fast-cloud-biz-react-ctrl</module>
+        <module>fast-cloud-biz-react-dao</module>
+        <module>fast-cloud-biz-react-domain</module>
+        <module>fast-cloud-biz-react-service</module>
+        <module>fast-cloud-biz-react-starter</module>
+    </modules>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-react-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-react-domain</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-react-starter</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-react-ctrl</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fast.cloud</groupId>
+                <artifactId>fast-cloud-biz-react-dao</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

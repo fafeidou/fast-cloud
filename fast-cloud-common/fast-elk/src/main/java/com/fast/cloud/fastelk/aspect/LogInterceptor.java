@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-03-15 9:27

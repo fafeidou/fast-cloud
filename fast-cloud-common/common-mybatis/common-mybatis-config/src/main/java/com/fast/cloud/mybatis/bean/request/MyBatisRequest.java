@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-16 11:31

@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-11 9:36

@@ -1,7 +1,7 @@
 package com.fast.cloud.core;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2018-11-29 15:01

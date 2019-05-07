@@ -8,7 +8,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-02 16:26

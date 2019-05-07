@@ -5,7 +5,7 @@ import static com.fast.cloud.design.strategy.Constants.B;
 import static com.fast.cloud.design.strategy.Constants.C;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-16 17:10

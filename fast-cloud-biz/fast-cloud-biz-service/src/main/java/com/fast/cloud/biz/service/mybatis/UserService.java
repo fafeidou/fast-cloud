@@ -10,7 +10,7 @@ import com.fast.cloud.mybatis.service.IService;
 import java.util.List;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-15 9:49

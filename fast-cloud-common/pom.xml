@@ -25,6 +25,7 @@
         <module>common-task</module>
         <module>common-dynamic-datasource-mysql</module>
         <module>common-rocket</module>
+        <module>common-mongo-react</module>
     </modules>
     <dependencies>
     </dependencies>

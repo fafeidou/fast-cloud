@@ -7,7 +7,7 @@ import java.net.URL;
 
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * 资源文件加载工具类
  *
  * @author batman.qin

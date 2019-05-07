@@ -11,7 +11,7 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author batman.qin
  */

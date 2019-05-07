@@ -9,7 +9,7 @@ import java.util.List;
 
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * GsonUtil 工具类
  *
  * @author batman.qin

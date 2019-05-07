@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-22 14:44

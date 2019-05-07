@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * 通用service
  *
  * @param <M> model

@@ -27,7 +27,7 @@ import static org.apache.poi.ss.usermodel.HorizontalAlignment.LEFT;
 import static org.apache.poi.ss.usermodel.HorizontalAlignment.RIGHT;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author batman.qin
  */

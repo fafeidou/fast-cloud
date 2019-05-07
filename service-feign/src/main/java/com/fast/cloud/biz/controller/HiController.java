@@ -8,7 +8,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2018-11-23 19:37

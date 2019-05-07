@@ -1,7 +1,7 @@
 package com.fast.cloud.mybatis.plus.domain;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-01-17 15:09

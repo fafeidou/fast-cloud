@@ -9,7 +9,7 @@ import java.util.zip.GZIPOutputStream;
 
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * GZIP压缩工具类
  *
  * @author batman.qin

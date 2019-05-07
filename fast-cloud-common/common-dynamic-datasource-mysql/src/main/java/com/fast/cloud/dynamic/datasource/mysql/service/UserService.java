@@ -9,7 +9,7 @@ import java.util.List;
 import static com.fast.cloud.dynamic.datasource.mysql.enums.DataSourceEnum.DB1;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-03-28 9:09

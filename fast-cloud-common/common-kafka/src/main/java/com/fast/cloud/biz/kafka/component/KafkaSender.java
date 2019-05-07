@@ -17,7 +17,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 import java.util.Optional;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2019-03-14 9:53

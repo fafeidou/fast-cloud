@@ -1,7 +1,7 @@
 package com.fast.cloud.design.observer;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @authorSubject Batman.qin
  * @create 2019-01-17 14:42

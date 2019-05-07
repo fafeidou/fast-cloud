@@ -3,7 +3,7 @@ package com.fast.cloud.core.utils.algorithms;
 import java.math.BigDecimal;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * 数字工具类
  *
  * @author batman.qin

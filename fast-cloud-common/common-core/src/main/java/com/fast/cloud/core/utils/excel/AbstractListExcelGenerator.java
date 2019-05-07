@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author batman.qin
  */

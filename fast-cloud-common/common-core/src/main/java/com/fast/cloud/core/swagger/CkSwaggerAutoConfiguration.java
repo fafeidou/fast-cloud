@@ -38,7 +38,7 @@ import java.util.Optional;
 import static com.google.common.collect.Lists.newArrayList;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author batman.qin
  */

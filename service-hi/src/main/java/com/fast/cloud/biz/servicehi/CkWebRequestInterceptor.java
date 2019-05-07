@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  *
  * @author Batman.qin
  * @create 2018-12-10 17:03

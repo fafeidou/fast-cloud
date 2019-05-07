@@ -14,7 +14,7 @@
 //import java.io.IOException;
 //
 ///**
-// * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+// *
 // * 该类是将Feign异常返回原来的模样
 // * @author Batman.qin
 // * @create 2019-04-15 14:42

@@ -9,7 +9,7 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 /**
- * COPYRIGHT © 2005-2018 CHARLESKEITH ALL RIGHTS RESERVED.
+ *
  * 通过Java的Zip输入输出流实现压缩和解压文件
  *
  * @author batman.qin
