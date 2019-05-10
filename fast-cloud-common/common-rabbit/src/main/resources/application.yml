@@ -1,9 +1,9 @@
 spring:
   rabbitmq:
-    host: 192.168.32.111
+    host: 192.168.138.54
     port: 5672
-    username: myuser
-    password: mypass
+    username: guest
+    password: guest
     listener:
       simple:
         acknowledge-mode: manual  #����ack
