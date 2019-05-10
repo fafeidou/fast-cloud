@@ -25,7 +25,7 @@ public class ServiceProducerApplication {
     String trace() {
         HashMap<String, String> stringStringHashMap = new HashMap<>();
         logger.info("trace product");
-        throw new RuntimeException("hello zipkin");
+        return "dfdfdsfdf";
     }
 
 }
