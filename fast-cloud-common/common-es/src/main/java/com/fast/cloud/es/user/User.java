@@ -1,4 +1,4 @@
-package com.fast.cloud.es.domain;
+package com.fast.cloud.es.user.domain;
 
 import org.springframework.data.elasticsearch.annotations.Document;
 

@@ -1,6 +1,6 @@
-package com.fast.cloud.es.dao;
+package com.fast.cloud.es.user.dao;
 
-import com.fast.cloud.es.domain.User;
+import com.fast.cloud.es.user.domain.User;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 /**

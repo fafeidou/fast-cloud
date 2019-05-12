@@ -1,6 +1,6 @@
-package com.fast.cloud.es.service;
+package com.fast.cloud.es.user.service;
 
-import com.fast.cloud.es.domain.User;
+import com.fast.cloud.es.user.domain.User;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.fast.cloud.es.service.impl;
+package com.fast.cloud.es.user.service.impl;
 
-import com.fast.cloud.es.dao.UserDao;
-import com.fast.cloud.es.domain.User;
-import com.fast.cloud.es.service.UserService;
+import com.fast.cloud.es.user.dao.UserDao;
+import com.fast.cloud.es.user.domain.User;
+import com.fast.cloud.es.user.service.UserService;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;

@@ -5,6 +5,14 @@ spring:
     elasticsearch:
       repositories:
         enabled: true
-      cluster-name: docker-cluster
-      cluster-nodes:
+      cluster-name: CollectorDBCluster
+      cluster-nodes: 192.168.32.111:9300
+  elasticsearch:
+      rest:
+        uris: ["http://192.168.32.111:9200"]
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.32.111:3306/area?serverTimezone=GMT%2B8
+      username: root
+      password: root
 
