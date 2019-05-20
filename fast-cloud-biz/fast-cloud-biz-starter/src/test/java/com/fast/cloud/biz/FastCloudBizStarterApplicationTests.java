@@ -6,6 +6,7 @@ import com.fast.cloud.biz.bean.vo.UserVo;
 import com.fast.cloud.biz.biz.dao.mapper.UmsAdminMapper;
 import com.fast.cloud.biz.domain.UmsAdmin;
 import com.fast.cloud.biz.service.mybatis.UserService;
+import com.fast.cloud.core.utils.date.DateUtil;
 import com.fast.cloud.core.utils.gson.GsonUtil;
 import com.fast.cloud.mybatis.bean.request.MyBatisRequest;
 import org.junit.Test;
@@ -15,10 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.BinaryOperator;
@@ -143,6 +141,17 @@ public class FastCloudBizStarterApplicationTests {
         umsAdmin.setEmail("sdfsdfs");
         umsAdminMapper.updateByPrimaryKeySelective(umsAdmin);
 //        System.out.println(GsonUtil.toJson(umsAdmins));
+    }
+
+    @Test
+    public void testInsertQuery() {
+        UmsAdmin umsAdmin = new UmsAdmin();
+        umsAdmin.setId(123231l);
+        umsAdmin.setCreateTime(new Date());
+        umsAdminMapper.insertSelective(umsAdmin);
+        UmsAdmin umsAdmin1 = umsAdminMapper.selectByPrimaryKey(123231l);
+        System.out.println(DateUtil.format(umsAdmin1.getCreateTime(), DateUtil.FORMAT_DATE_YMDHMS));
+
     }
 
 }

@@ -4,3 +4,8 @@ spring:
       host: 192.168.24.53
       port: 27017
       database: test_insert
+logging:
+  path:  C:\idea_work\git\fast-cloud\fast-cloud-biz-react\
+  file:  fast-cloud-biz-react.log
+  level:
+    root: info

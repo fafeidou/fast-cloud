@@ -1,9 +1,13 @@
 spring:
   rabbitmq:
-    host: 192.168.138.54
+#    host: 192.168.138.54
+#    port: 5672
+#    username: guest
+#    password: guest
+    host: 47.101.167.46
     port: 5672
     username: guest
-    password: guest
+    password: ck@rabbit
     listener:
       simple:
         acknowledge-mode: manual  #����ack

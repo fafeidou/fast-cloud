@@ -30,6 +30,20 @@ spring:
           filters:
             - SwaggerHeaderFilter
             - StripPrefix=1
+        - id: service-hi-react
+          uri: lb://service-hi-react
+          predicates:
+            - Path=/service-hi-react/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
+        - id: service-feign
+          uri: lb://service-feign
+          predicates:
+            - Path=/service-feign/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
 
 server:
   port: 9000

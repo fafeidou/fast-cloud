@@ -1,5 +1,6 @@
 package com.fast.cloud.core.utils.lambda;
 
+import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 
@@ -13,8 +14,6 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toMap;
 
 /**
- *
- *
  * @author Batman.qin
  * @create 2019-01-11 9:36
  */
@@ -127,8 +126,9 @@ public class StreamUtil {
 
     /**
      * Convert an {@link Optional} to a {@link Stream}
+     *
      * @param optional the optional to convert to a stream
-     * @param <T> the type of the element
+     * @param <T>      the type of the element
      * @return a stream containing the optional's value or empty stream if not present
      */
     public static <T> Stream<T> asStream(Optional<T> optional) {
@@ -139,7 +139,7 @@ public class StreamUtil {
      * Convert an {@link Iterator} to a {@link Stream}.
      *
      * @param iterator the iterator to convert to a stream
-     * @param <T> the type of a single element
+     * @param <T>      the type of a single element
      * @return a stream containing the values of the iterator
      */
     public static <T> Stream<T> asStream(Iterator<T> iterator) {
@@ -148,8 +148,9 @@ public class StreamUtil {
 
     /**
      * Convert an {@link Iterator} to a {@link Stream}.
+     *
      * @param iterator the iterator to convert to a stream
-     * @param <T> the type of a single element
+     * @param <T>      the type of a single element
      * @param parallel if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream.
      * @return a stream containing the values of the iterator
      */
@@ -159,8 +160,9 @@ public class StreamUtil {
 
     /**
      * Convert an {@link Iterable} to a {@link Stream}
+     *
      * @param iterable the iterable to convert
-     * @param <T> the type of a single element
+     * @param <T>      the type of a single element
      * @return a (non-parallel) stream containing the values of the iterable
      */
     public static <T> Stream<T> asStream(Iterable<T> iterable) {
@@ -169,9 +171,10 @@ public class StreamUtil {
 
     /**
      * Convert an {@link Iterable} to a {@link Stream}
+     *
      * @param iterable the iterable to convert
      * @param parallel if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream.
-     * @param <T> the type of a single element
+     * @param <T>      the type of a single element
      * @return a stream containing the values of the iterable
      */
     public static <T> Stream<T> asStream(Iterable<T> iterable, boolean parallel) {
@@ -183,14 +186,61 @@ public class StreamUtil {
     /**
      * Concatenate the given streams to a single stream. Follows the semantics
      * of {@link Stream#concat(Stream, Stream)}.
+     *
      * @param streams the streams to concatenate
-     * @param <T> type of the stream element
+     * @param <T>     type of the stream element
      * @return a stream containing all of the elements in all of the streams
      */
     @SafeVarargs
-    public static <T> Stream<T> concat(Stream<T> ...streams) {
+    public static <T> Stream<T> concat(Stream<T>... streams) {
         return Stream.of(streams)
                 .filter(Objects::nonNull)
                 .reduce(Stream::concat).get();
     }
+
+    public static void main(String[] args) {
+        Map<String, Object> h1 = new HashMap<>();
+        h1.put("12", "fdsa");
+        h1.put("123", "fdsa");
+        h1.put("124", "fdsa");
+        h1.put("125", "fdsa");
+
+        Map<String, Object> h2 = new HashMap<>();
+        h2.put("h12", "fdsa");
+        h2.put("h123", "fdsa");
+        h2.put("h124", "fdsa");
+        h2.put("h125", "fdsa");
+
+        Map<String, Object> h3 = new HashMap<>();
+        h3.put("h12", "fdsa");
+        h3.put("h3123", "fdsa");
+        h3.put("h3124", "fdsa");
+        h3.put("h3125", "fdsa");
+
+        List<Map<String, Object>> lists = new ArrayList<>();
+        lists.add(h1);
+        lists.add(h2);
+        lists.add(h3);
+        mergeListMapToOneMap(lists);
+    }
+
+    public static Map<String, Object> mergeListMapToOneMap(List<Map<String, Object>> lists) {
+        if (!CollectionUtils.isEmpty(lists)) {
+            return lists.stream()
+                    .map(Map::entrySet)
+                    .flatMap(Set::stream)
+                    .distinct()
+                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        }
+        return Maps.newHashMap();
+    }
+
+    public static Set<String> mergeListMapToOneMapKey(List<Map<String, Object>> lists) {
+        return mergeListMapToOneMap(lists).keySet();
+    }
+
+    public static Collection<Object> mergeListMapToOneMapValue(List<Map<String, Object>> lists) {
+        return mergeListMapToOneMap(lists).values();
+    }
+
 }

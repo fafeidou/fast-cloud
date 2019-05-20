@@ -25,6 +25,8 @@
         <module>springboot-admin</module>
         <module>fast-cloud-biz</module>
         <module>fast-cloud-biz-react</module>
+        <module>fast-cloud-react</module>
+        <module>simple-some</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
