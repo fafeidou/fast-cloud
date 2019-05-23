@@ -60,16 +60,14 @@ public class HiController {
                 .bodyToMono(String.class);
     }
 
-    @GetMapping(value = "/download")
-    Mono<ClientResponse> download() {
-        Mono<ClientResponse> resp = webClientBuilder.baseUrl("http://SERVICE-HI-REACT/")
-                .build()
-                .post()
-                .uri("download")
-                .accept(MediaType.APPLICATION_OCTET_STREAM)
-                .exchange();
-        return Mono.just(resp.block());
-    }
-
-
+//    @GetMapping(value = "/download")
+//    Mono<ClientResponse> download() {
+//        Mono<ClientResponse> resp = webClientBuilder.baseUrl("http://SERVICE-HI-REACT/")
+//                .build()
+//                .post()
+//                .uri("download3")
+//                .accept(MediaType.IMAGE_PNG)
+//                .exchange();
+//        return resp;
+//    }
 }
