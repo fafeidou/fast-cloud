@@ -15,5 +15,6 @@
         <module>common-mybatis-generator</module>
         <module>mybatis-plus</module>
         <module>mybatis-plus-gen</module>
+        <module>mybatis-starter-gen</module>
     </modules>
 </project>
