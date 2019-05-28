@@ -23,7 +23,8 @@ public class HiController {
     public Mono<String> sayHi(@RequestParam String name) {
         return webClientBuilder.baseUrl("http://SERVICE-HI-REACT/")
                 .build()
-                .get().uri("/hello/{name}", "aaa")
+                .get()
+                .uri("/hello/{name}", "aaa")
                 .retrieve()
                 .bodyToMono(String.class);
     }

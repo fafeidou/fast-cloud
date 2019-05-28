@@ -2,11 +2,10 @@ package com.fast.cloud.sidecarclient.rest;
 
 import com.fast.cloud.sidecarclient.client.PythonFeignClient;
 import com.fast.cloud.sidecarclient.entity.Message;
+import com.fast.cloud.sidecarclient.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -30,5 +29,20 @@ public class PythonController {
     @RequestMapping(value = "/message/{id}", method = RequestMethod.GET)
     public List<Message> getMsg(@PathVariable Long id) {
         return pythonFeignClient.getMsg(id);
+    }
+
+    @RequestMapping(value = "/getStudent", method = RequestMethod.GET)
+    public Student getMsg() {
+        return pythonFeignClient.getStudent(123l);
+    }
+
+    @RequestMapping(value = "/getStudents", method = RequestMethod.GET)
+    public List<Student> getStudents() {
+        return pythonFeignClient.getStudents();
+    }
+
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    String uploadImg(@RequestParam("the_file") MultipartFile file){
+        return pythonFeignClient.uploadImg(file);
     }
 }
