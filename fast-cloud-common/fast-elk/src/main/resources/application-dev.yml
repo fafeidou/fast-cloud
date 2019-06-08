@@ -1,10 +1,6 @@
-server:
-  port: 8888
 spring:
   application:
     name: fast-elk
-  profiles:
-    active: dev
   kafka:
     # 指定kafka 代理地址，可以多个
     bootstrap-servers: 106.14.227.31:9092

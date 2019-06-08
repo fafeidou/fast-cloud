@@ -1,5 +1,6 @@
 package com.fast.cloud.core.swagger;
 
+import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Lists;
@@ -47,6 +48,7 @@ import static com.google.common.collect.Lists.newArrayList;
 @EnableConfigurationProperties(value = SwaggerConfig.class)
 @EnableAutoConfiguration
 @ConditionalOnBean(SwaggerConfig.class)
+@EnableSwaggerBootstrapUI
 public class CkSwaggerAutoConfiguration implements ApplicationContextAware {
     private Logger logger = LoggerFactory.getLogger(CkSwaggerAutoConfiguration.class);
     private final SwaggerConfig swaggerConfig;

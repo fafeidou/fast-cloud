@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<!-- springProfile用于指定当前激活的环境，如果spring.profile.active的值是哪个，就会激活对应节点下的配置 -->
-	<springProfile name="default">
+	<springProfile name="dev">
 		<!-- configuration to be enabled when the "staging" profile is active -->
 		<springProperty scope="context" name="module" source="spring.application.name"
 						defaultValue="undefinded"/>
 		<!-- 该节点会读取Environment中配置的值，在这里我们读取application.yml中的值 -->
 		<springProperty scope="context" name="bootstrapServers" source="spring.kafka.bootstrap-servers"
-						defaultValue="192.168.32.111:9092"/>
+						defaultValue="106.14.227.31:9092"/>
 		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 			<!-- encoders are assigned the type
                  ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
@@ -40,7 +40,10 @@
 
 		</appender>
 		<!-- 指定项目中的logger -->
-		<logger name="org.springframework.test" level="INFO" >
+		<!--<logger name="org.springframework.test" level="INFO" >
+			<appender-ref ref="kafka" />
+		</logger>-->
+		<logger name="com.fast.cloud.fastelk.controller" level="INFO" >
 			<appender-ref ref="kafka" />
 		</logger>
 		<root level="info">

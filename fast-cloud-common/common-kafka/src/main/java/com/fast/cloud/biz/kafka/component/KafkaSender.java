@@ -64,6 +64,8 @@ public class KafkaSender<T> {
      */
     @KafkaListener(id = "tut", topics = "kafka.tut")
     public void listen(ConsumerRecord<?, ?> record, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
+        System.out.println("topic名称:" + record.topic() + ",key:" + record.key() + ",分区位置:" + record.partition()
+                + ", 下标" + record.offset());
         //判断是否NULL
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());
 

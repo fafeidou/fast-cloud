@@ -11,7 +11,14 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://192.168.32.111:9411/
+    base-url: http://106.15.102.20:9411/
+    sender:
+        type: kafka
+  rabbitmq:
+      host: 192.168.138.54
+      username: guest
+      password: guest
+      port: 5672
 eureka:
   client:
     serviceUrl:
@@ -20,8 +27,9 @@ eureka:
     stream:
       kafka:
         binder:
-          brokers: 192.168.32.111:9092
-          zkNodes: 192.168.32.111:2181
+          brokers: 106.14.227.31:9092
+          zkNodes: 106.14.227.31:2181
+
 ribbon:
   ConnectTimeout: 60000
   ReadTimeout: 60000
