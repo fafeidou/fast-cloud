@@ -1,14 +1,21 @@
 spring:
   application:
     name: api-gateway
+  security:
+    basic:
+      enabled: true
+      path: /swagger-ui.html
+    user:
+      name: admin
+      password: admin
   sleuth:
     web:
       client:
         enabled: true
     sampler:
       probability: 1.0
-  zipkin:
-    base-url: http://192.168.32.111:9411/
+#  zipkin:
+#    base-url: http://192.168.32.111:9411/
   cloud:
     gateway:
       discovery:
@@ -56,3 +63,18 @@ eureka:
 logging:
   level:
     org.springframework.cloud.gateway: debug
+
+ribbon:
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 150000
+

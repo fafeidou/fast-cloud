@@ -14,6 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -38,6 +39,7 @@ public class ServiceHiApplication extends Loggable implements SchedualServiceHi 
     @Override
     @CacheResult
     @HystrixCommand
+    @ResponseBody
     public String sayHiFromClientOne(String name) {
         $info("----------------" + name);
         return "hi " + name + " ,i am from port:" + port;

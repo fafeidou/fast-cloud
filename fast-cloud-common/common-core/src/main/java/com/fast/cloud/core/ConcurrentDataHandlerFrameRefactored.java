@@ -20,18 +20,18 @@ import java.util.function.Supplier;
 public class ConcurrentDataHandlerFrameRefactored {
 
     public static void main(String[] args) {
-        List<Integer> allData = getAllData(DataSupplier::getKeys, GetTradeData::getData);
-        consumer(allData, System.out::println);
-
-        List<Double> handledData = handleAllData(allData,
-                (numbers) -> StreamUtil.map(numbers, (num) -> Math.sqrt(num)));
-        consumer(handledData, System.out::println);
-
-        List<Object> objs = StreamUtil.map(DataSupplier.getKeys(), s -> Double.valueOf(s));
-
-        List<Double> handledData2 =
-                handleAllData((numbers) -> StreamUtil.map(numbers, (num) -> Math.pow((double) num, 2))).apply(objs);
-        consumer(handledData2, System.out::println);
+//        List<Integer> allData = getAllData(DataSupplier::getKeys, GetTradeData::getData);
+//        consumer(allData, System.out::println);
+//
+//        List<Double> handledData = handleAllData(allData,
+//                (numbers) -> StreamUtil.map(numbers, (num) -> Math.sqrt(num)));
+//        consumer(handledData, System.out::println);
+//
+//        List<Object> objs = StreamUtil.map(DataSupplier.getKeys(), s -> Double.valueOf(s));
+//
+//        List<Double> handledData2 =
+//                handleAllData((numbers) -> StreamUtil.map(numbers, (num) -> Math.pow((double) num, 2))).apply(objs);
+//        consumer(handledData2, System.out::println);
 
         Function<List<String>, List<Object>> func = (numbers) -> StreamUtil.
                 map(numbers, (num) -> Integer.parseInt(num) * 2);

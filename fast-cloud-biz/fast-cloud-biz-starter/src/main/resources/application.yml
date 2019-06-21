@@ -40,18 +40,15 @@ logging:
 
 ck:
   swagger:
-    title: APIs
-    description: 微服务<font color="red">test模块</font>接口文档
+    title: api manage RESTful Content APIs
+    description: <font color="red">接口文档</font>
     version: 1.0
     modules:
-      - {
-        model-name: ck-content,
-        packages: ["com.fast.cloud.biz.controller"],
-        group-name: ck-content,
-        name: ck-content,
-        location: "/admin/service-content/v2/api-docs?group=ck-content",
-        version: 2.0
-      }
+    - {
+      model-name: model_one,
+      packages: ["com.fast.cloud.biz.controller"],
+      group-name: model_one
+    }
   test:
     map-config:
       hello:

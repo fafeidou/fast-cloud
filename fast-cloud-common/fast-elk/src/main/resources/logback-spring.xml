@@ -20,7 +20,7 @@
 			<encoder>
 				<pattern>${module} | %d | %-5level| %logger{15} - %msg</pattern>
 			</encoder>
-			<topic>logger-channel</topic>
+			<topic>abklog_topic</topic>
 			<keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy"/>
 			<deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy"/>
 
