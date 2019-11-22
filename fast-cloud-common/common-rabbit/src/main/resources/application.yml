@@ -1,18 +1,18 @@
-spring:
-  rabbitmq:
-#    host: 192.168.138.54
+#spring:
+#  rabbitmq:
+##    host: 192.168.138.54
+##    port: 5672
+##    username: guest
+##    password: guest
+#    host: 47.101.167.46
 #    port: 5672
 #    username: guest
-#    password: guest
-    host: 47.101.167.46
-    port: 5672
-    username: guest
-    password: ck@rabbit
-    listener:
-      simple:
-        acknowledge-mode: manual  #����ack
-    publisher-confirms: true #��������ȷ��
-    publisher-returns: true #��������ʧ�ܷ���
+#    password: ck@rabbit
+#    listener:
+#      simple:
+#        acknowledge-mode: manual  #����ack
+#    publisher-confirms: true #��������ȷ��
+#    publisher-returns: true #��������ʧ�ܷ���
 
 
 

@@ -14,11 +14,11 @@ spring:
     base-url: http://106.15.102.20:9411/
     sender:
       type: kafka
-  rabbitmq:
-    host: 192.168.138.54
-    username: guest
-    password: guest
-    port: 5672
+#  rabbitmq:
+#    host: localhost
+#    username: guest
+#    password: guest
+#    port: 5672
   cloud:
       stream:
         kafka:

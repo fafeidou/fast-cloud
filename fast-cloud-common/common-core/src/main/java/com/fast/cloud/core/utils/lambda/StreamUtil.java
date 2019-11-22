@@ -4,8 +4,10 @@ import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
@@ -241,6 +243,41 @@ public class StreamUtil {
 
     public static Collection<Object> mergeListMapToOneMapValue(List<Map<String, Object>> lists) {
         return mergeListMapToOneMap(lists).values();
+    }
+
+    /**
+     * 求和
+     *
+     * @param field  传入字段
+     * @param result 待计算集合
+     * @param <T>    总和
+     * @return
+     */
+    private <T> Long summarySum(Function<T, Long> field, Supplier<List<T>> result) {
+        return result.get().stream().map(model -> field.apply(model)).reduce(Long::sum).orElse(0l);
+    }
+
+    /**
+     * 求平均值
+     *
+     * @param field  传入字段
+     * @param result 待计算集合
+     * @param <T>    平均值
+     * @return
+     */
+    private <T> Double summaryRate(Function<T, Double> field, Supplier<List<T>> result) {
+        return formatDouble(result.get().stream().mapToDouble(model -> field.apply(model)).average().orElse(0.0));
+    }
+
+    /**
+     * 四舍五入格式化两位小数
+     *
+     * @param num 需要格式化的数
+     * @return
+     */
+    private double formatDouble(double num) {
+        return BigDecimal.valueOf(num)
+                .setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
 
 }
