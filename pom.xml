@@ -27,6 +27,7 @@
         <module>fast-cloud-biz-react</module>
         <module>fast-cloud-react</module>
         <module>simple-some</module>
+        <module>fast-cloud-eureka-grpc</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

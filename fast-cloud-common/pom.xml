@@ -26,6 +26,7 @@
         <module>common-dynamic-datasource-mysql</module>
         <module>common-rocket</module>
         <module>common-mongo-react</module>
+        <module>common-eureka-grpc</module>
     </modules>
     <dependencies>
     </dependencies>
