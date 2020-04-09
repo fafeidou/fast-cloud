@@ -14,5 +14,28 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+        <dependency>
+            <!-- spring integration -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-integration</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- spring integration与redis结合，实现redis分布式锁 -->
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- spring integration -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- spring integration与redis结合，实现redis分布式锁 -->
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-zookeeper</artifactId>
+        </dependency>
     </dependencies>
 </project>
