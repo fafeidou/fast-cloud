@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.fast.cloud.core.swagger.CkSwaggerAutoConfiguration,\
-com.fast.cloud.core.test.TestAutoConfiguration
+com.fast.cloud.core.test.TestAutoConfiguration,\
+com.fast.cloud.core.pool.ExecutorPoolAutoConfiguration

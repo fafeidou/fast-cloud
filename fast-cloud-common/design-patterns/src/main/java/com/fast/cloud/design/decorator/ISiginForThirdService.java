@@ -14,6 +14,7 @@ public interface ISiginForThirdService extends ISiginSerevice {
      * @param password
      * @return
      */
+    @Override
     String login(String username, String password);
 
     /**
