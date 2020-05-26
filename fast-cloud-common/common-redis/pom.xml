@@ -31,11 +31,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
-            <!-- spring integration与redis结合，实现redis分布式锁 -->
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.2-android</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fast.cloud</groupId>
+            <artifactId>common-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--<dependency>
+            &lt;!&ndash; spring integration与redis结合，实现redis分布式锁 &ndash;&gt;
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-zookeeper</artifactId>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>
