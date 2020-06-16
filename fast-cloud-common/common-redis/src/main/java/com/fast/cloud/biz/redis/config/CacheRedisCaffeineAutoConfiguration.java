@@ -32,7 +32,6 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
 @EnableConfigurationProperties(CacheRedisCaffeineProperties.class)
-@EnableAutoConfiguration
 public class CacheRedisCaffeineAutoConfiguration {
 
     @Autowired
