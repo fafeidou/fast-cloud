@@ -35,13 +35,22 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>28.2-android</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.60</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
+        <!--<dependency>
             <groupId>com.fast.cloud</groupId>
             <artifactId>common-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
         <!--<dependency>
             &lt;!&ndash; spring integration与redis结合，实现redis分布式锁 &ndash;&gt;
             <groupId>org.springframework.integration</groupId>

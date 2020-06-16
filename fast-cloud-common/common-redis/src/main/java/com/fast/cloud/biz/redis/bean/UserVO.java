@@ -1,6 +1,7 @@
 package com.fast.cloud.biz.redis.bean;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author qinfuxiang
@@ -12,6 +13,9 @@ public class UserVO implements Serializable {
     private String address;
     private Integer age;
     private String email = "";
+    private Long id;
+
+    private Date createTime;
 
     public String getEmail() {
         return email;
@@ -45,4 +49,19 @@ public class UserVO implements Serializable {
         this.age = age;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 }
