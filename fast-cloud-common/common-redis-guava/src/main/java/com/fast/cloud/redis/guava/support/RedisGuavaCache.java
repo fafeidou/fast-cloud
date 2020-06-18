@@ -34,7 +34,7 @@ public class RedisGuavaCache extends AbstractValueAdaptingCache {
 
     private Map<String, Long> expires;
 
-    private String topic = "cache:redis:caffeine:topic";
+    private String topic = "cache:redis:guava:topic";
 
     private Map<String, ReentrantLock> keyLockMap = new ConcurrentHashMap<String, ReentrantLock>();
 
@@ -44,15 +44,15 @@ public class RedisGuavaCache extends AbstractValueAdaptingCache {
 
     public RedisGuavaCache(String name, RedisTemplate<Object, Object> stringKeyRedisTemplate,
         com.google.common.cache.Cache<Object, Object> loadingCache,
-        CacheRedisGuavaProperties cacheRedisCaffeineProperties) {
-        super(cacheRedisCaffeineProperties.isCacheNullValues());
+        CacheRedisGuavaProperties cacheRedisGuavaProperties) {
+        super(cacheRedisGuavaProperties.isCacheNullValues());
         this.name = name;
         this.stringKeyRedisTemplate = stringKeyRedisTemplate;
         this.loadingCache = loadingCache;
-        this.cachePrefix = cacheRedisCaffeineProperties.getCachePrefix();
-        this.defaultExpiration = cacheRedisCaffeineProperties.getRedis().getDefaultExpiration();
-        this.expires = cacheRedisCaffeineProperties.getRedis().getExpires();
-        this.topic = cacheRedisCaffeineProperties.getRedis().getTopic();
+        this.cachePrefix = cacheRedisGuavaProperties.getCachePrefix();
+        this.defaultExpiration = cacheRedisGuavaProperties.getRedis().getDefaultExpiration();
+        this.expires = cacheRedisGuavaProperties.getRedis().getExpires();
+        this.topic = cacheRedisGuavaProperties.getRedis().getTopic();
     }
 
     @Override
@@ -140,7 +140,7 @@ public class RedisGuavaCache extends AbstractValueAdaptingCache {
 
     @Override
     public void evict(Object key) {
-        // 先清除redis中缓存数据，然后清除caffeine中的缓存，避免短时间内如果先清除caffeine缓存后其他请求会再从redis里加载到caffeine中
+        // 先清除redis中缓存数据，然后清除guava中的缓存，避免短时间内如果先清除guava缓存后其他请求会再从redis里加载到guava中
         stringKeyRedisTemplate.delete(getKey(key));
 
         push(new CacheMessage(this.name, key));
@@ -150,7 +150,7 @@ public class RedisGuavaCache extends AbstractValueAdaptingCache {
 
     @Override
     public void clear() {
-        // 先清除redis中缓存数据，然后清除caffeine中的缓存，避免短时间内如果先清除caffeine缓存后其他请求会再从redis里加载到caffeine中
+        // 先清除redis中缓存数据，然后清除guava中的缓存，避免短时间内如果先清除guava缓存后其他请求会再从redis里加载到guava中
         Set<Object> keys = stringKeyRedisTemplate.keys(this.name.concat(":*"));
         for (Object key : keys) {
             stringKeyRedisTemplate.delete(key);

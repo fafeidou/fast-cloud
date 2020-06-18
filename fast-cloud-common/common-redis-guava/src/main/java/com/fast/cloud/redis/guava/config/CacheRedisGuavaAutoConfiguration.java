@@ -29,7 +29,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
 @EnableConfigurationProperties(CacheRedisGuavaProperties.class)
-public class CacheRedisCaffeineAutoConfiguration {
+public class CacheRedisGuavaAutoConfiguration {
 
     @Autowired
     private CacheRedisGuavaProperties cacheRedisGuavaProperties;
@@ -81,11 +81,11 @@ public class CacheRedisCaffeineAutoConfiguration {
     @Bean
     public RedisMessageListenerContainer redisMessageListenerContainer(
         RedisTemplate<Object, Object> redisTemplate,
-        RedisGuavaCacheManager redisCaffeineCacheManager) {
+        RedisGuavaCacheManager redisGuavaCacheManager) {
         RedisMessageListenerContainer redisMessageListenerContainer = new RedisMessageListenerContainer();
         redisMessageListenerContainer.setConnectionFactory(redisTemplate.getConnectionFactory());
         CacheMessageListener cacheMessageListener = new CacheMessageListener(redisTemplate,
-            redisCaffeineCacheManager);
+            redisGuavaCacheManager);
         redisMessageListenerContainer.addMessageListener(cacheMessageListener,
             new ChannelTopic(cacheRedisGuavaProperties.getRedis().getTopic()));
         return redisMessageListenerContainer;

@@ -92,8 +92,8 @@ public class RedisGuavaCacheManager implements CacheManager {
             return;
         }
 
-        RedisGuavaCache redisCaffeineCache = (RedisGuavaCache) cache;
-        redisCaffeineCache.clearLocal(key);
+        RedisGuavaCache redisGuavaCache = (RedisGuavaCache) cache;
+        redisGuavaCache.clearLocal(key);
     }
 }
 
