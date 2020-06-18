@@ -27,6 +27,7 @@
         <module>common-rocket</module>
         <module>common-mongo-react</module>
         <module>common-eureka-grpc</module>
+        <module>common-redis-guava</module>
     </modules>
     <dependencies>
     </dependencies>
