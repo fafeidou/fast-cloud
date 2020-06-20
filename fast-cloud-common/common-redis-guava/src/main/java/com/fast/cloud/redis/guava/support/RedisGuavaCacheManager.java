@@ -2,7 +2,10 @@ package com.fast.cloud.redis.guava.support;
 
 
 import com.fast.cloud.redis.guava.config.CacheRedisGuavaProperties;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.guava.CaffeinatedGuava;
 import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
 import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -58,7 +61,10 @@ public class RedisGuavaCacheManager implements CacheManager {
     }
 
     public com.google.common.cache.Cache<Object, Object> guavaCache() {
-        CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder();
+        Caffeine<Object, Object> cacheBuilder = Caffeine.newBuilder();
+        com.google.common.cache.Cache<Object, Object> build = CaffeinatedGuava.build(cacheBuilder);
+
+//        CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder();
 
         if (cacheRedisGuavaProperties.getGuava().getExpireAfterAccess() > 0) {
             cacheBuilder.expireAfterAccess(cacheRedisGuavaProperties.getGuava().getExpireAfterAccess(),
@@ -78,7 +84,8 @@ public class RedisGuavaCacheManager implements CacheManager {
             cacheBuilder.refreshAfterWrite(cacheRedisGuavaProperties.getGuava().getRefreshAfterWrite(),
                 TimeUnit.MILLISECONDS);
         }
-        return cacheBuilder.build();
+//        return cacheBuilder.build();
+        return build;
     }
 
     @Override
